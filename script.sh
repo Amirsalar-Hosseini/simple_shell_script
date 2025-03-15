@@ -8,10 +8,21 @@
 # Usage: ./scripts (if this program has execute chmod)
 ##################################
 
-name="amir"
-age=20 # this type look we must dont change value of this variable (symbolic and means if we change this variable, thats dont give error)
+name=$1
+age=$2
 
-echo "hello , my name is ${name}, Im $(( $age + 2 )) years old"
+if test -z $name
+then
+	read -p "whats your name? " name
+fi
+
+
+if test -z $age
+then
+	read -p "how old are you?? " age
+fi
+
+# echo "hello , my name is ${name}, Im $(( $age + 2 )) years old"
 
 
 if [ $name == "ali" ]
