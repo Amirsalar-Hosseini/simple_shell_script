@@ -20,7 +20,7 @@ colorful(){
 		local color_code='\e[39m'
 	fi
 
-	echo -e ${color_code}${string}
+	echo -e "${color_code}${string}\e[0m"
 }
 
 read -p "whats your string? : " string
